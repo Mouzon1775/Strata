@@ -95,7 +95,7 @@ These are only numbers we measured ourselves. Your results will vary.
 
 In the same sweep, depth 7 / min-p 0.7 was about 2.4% faster on generation (97.5 tok/s) with byte-identical output. We kept 6/0.5.
 
-**PR #3248 effect, 2026-10-20** (same hardware, compared with plain hotschmoe 1c360526): about 3.3 s faster to first token on a 100K prompt (-8.8%), about 0.5 s faster at 32K. Decode output was byte-identical to the unpatched build on every comparable prompt.
+**PR #3248 effect, 2026-10-20** (same hardware, compared with plain hotschmoe 1c360526): on a 100K-token prompt, 3 runs each: first token 30.7 s -> 27.2 s (-3.5 s, -11%), whole request 37.3 s -> 34.0 s (-3.3 s, -8.8%). Generated text was byte-identical to the unpatched build on all 14 prompts we could compare.
 
 Not measured, so not claimed: other models, other quants, fewer than 4 cards, and other B-series cards.
 
